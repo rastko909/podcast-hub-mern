@@ -1,0 +1,33 @@
+.navigation { 
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  background: #F3F2F3;
+  position: sticky;
+  max-width: 100vw;
+  /* border: 1px solid red; */
+}
+
+.navigation-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 940px;
+  /* border: 1px solid red; */
+}
+
+.link-container > a {
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.logo-icon {
+  margin-left: 1rem;
+}

@@ -1,0 +1,93 @@
+.podcast-card {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  transition: all 1s;
+}
+
+.podcast-card > * {
+  margin: 0.2rem;
+}
+
+.podcast-image {
+  border-radius: 0.5rem;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.podcast-actions {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+}
+
+.podcast-actions > * {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin: 0.25rem;
+}
+
+.podcast-action-item {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.blue {
+  background: dodgerblue;
+  color: white;
+}
+
+.red {
+  background: red;
+  color: white;
+}
+
+.green {
+  background: #4DBD33;
+  color: white;
+}
+
+.podcast-description {
+  /* min-height: 15rem; */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: black;
+  line-height: 1.5rem;
+  display: none;
+  background: #F3F2F3;
+}
+
+.podcast-title {
+  font-weight: bolder;
+  color: black;
+  max-width: 100%;
+  background: #F3F2F3;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  /* z-index: 1000; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.podcast-buttons-row {
+  padding: 0.5rem;
+  max-width: 100%;
+  border-radius: 0.5rem;
+  background: #F3F2F3;
+}
+
+.podcast-button {
+  border-radius: 0.5rem;
+  width: 50%;
+  padding: 0.5rem;
+}
