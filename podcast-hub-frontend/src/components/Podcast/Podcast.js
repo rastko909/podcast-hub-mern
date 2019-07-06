@@ -30,8 +30,12 @@ class Podcast extends React.Component {
         <div className="podcast-header-profile">
           <img className="podcast-header-profile-image" src={image} alt={title} />
           <div className="podcast-header-details">
-            <h1>{title}</h1>
-            <p>{description}</p>
+            <div className="podcast-header-title">
+              <h1>{title}</h1>
+            </div>
+            <div className="podcast-header-description">
+              <p className="desc">{description}</p>
+            </div>
           </div>
 
         </div>
@@ -43,7 +47,21 @@ class Podcast extends React.Component {
     return episodes.map((episode, index) => {
       return (
         <div key={index} className="podcast-episodes-card">
-          <a className="episode-link" href={episode.link}>{episode.title}</a>
+
+          <div className="episode-link-container">
+            <a className="episode-link" href={episode.link}>{episode.title}</a>
+          </div>
+          <div className="episode-link-buttons">
+            <div className="play-button">
+              <i className="fas fa-play-circle"></i>
+            </div>
+            <div className="download-button">
+              <i className="fas fa-arrow-alt-circle-down"></i>
+            </div>
+            <div className="love-button">
+            <i className="fas fa-heart"></i>
+            </div>
+          </div>
         </div>
       )
     })

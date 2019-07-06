@@ -1,16 +1,92 @@
 .podcast-episodes-card {
-  background: white;
   color: black;
   border-radius: 0.25rem;
   width: 100%;
-  margin: 0.25rem;
-  padding: 1rem;
+  margin-bottom: 0.25rem;
   display: flex; 
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
 }
 
+.episode-link-container {
+  background: white;
+  color: black;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  width: 80%;
+  display: flex; 
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.25rem;
+}
+
+.fa-play-circle {
+  color: white !important;
+}
+
+.fa-arrow-alt-circle-down {
+  color: white !important;
+}
+
+.fa-heart {
+  color: white !important;
+}
+
+.episode-link-buttons {
+  margin: 0.25rem;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: white;
+  border-radius: 0.25rem;
+}
+
+.play-button {
+  font-size: 1rem !important;
+  background: #28A745;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.download-button {
+  font-size: 1em !important;
+  background: #007BFF;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.love-button {
+  font-size: 1rem !important;
+  background: #DC3544;
+  border-radius: 50%;
+  padding: 0.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .podcast-header {
+  display: flex;
+  /* border: 1px solid red; */
   padding: 0.25rem;
   width: 100%;
   margin: 0.25rem;
@@ -18,19 +94,42 @@
   color: black;
 }
 
+.podcast-header-title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  background: none;
+  /* border-bottom: 2px solid white; */
+}
+
+p.desc {
+  padding: 0.25rem;
+  margin: 0;
+
+}
+
+.podcast-header-description {
+  border-radius: 0.25rem;
+  background: white;
+  padding: 0.5rem;
+  height: 100%;
+}
+
 .podcast-header-profile {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 .podcast-header-details { 
+  width: 100%;
+  min-height: 100%;
   margin-left: 1rem;  
   border-radius: 0.25rem;
-  background: white;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  justify-content: space-between;
 }
 
 .podcast-header-profile-image {
