@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import './Navigation.css'
 
 class Navigation extends React.Component {
-  componentDidMount() {
-    console.log(this.props)
-  }
 
   render() {
     return (
@@ -13,7 +10,7 @@ class Navigation extends React.Component {
         <nav className="navigation sticky">
           <div className="navigation-inner">
             <div className="logo">
-              <h1>Podcast Hub <i className="fas fa-microphone-alt logo-icon"></i> </h1>
+              <Link to="/"><h1>Podcast Hub <i className="fas fa-microphone-alt logo-icon"></i> </h1></Link>
             </div>
             <div className="link-container">
               <Link to="#" className="navigation-button" onClick={this.props.addPodcast}>Add Podcast</Link>
@@ -23,8 +20,8 @@ class Navigation extends React.Component {
         </nav>
       </>
     )
-
   }
+
 }
 
 export default Navigation;

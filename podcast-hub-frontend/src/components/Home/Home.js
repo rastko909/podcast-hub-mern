@@ -1,26 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import axios from 'axios';
 import './Home.css';
-// import { homedir } from 'os';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
-
-  state = { podcasts: null }
-
-  getAllPodcasts = async () => {
-    try {
-      const podcasts = await axios.get('http://localhost:5000/podcast/all');
-      const data = await podcasts.data
-      console.log(data)
-      if (data) {
-        this.setState({ podcasts: data })
-      }
-    }
-    catch (error) {
-      console.log('error', error)
-    }
-  }
 
   renderPodcastCards = (podcasts) => {
     return podcasts.map((podcast, index) => {
@@ -29,12 +11,19 @@ class Home extends React.Component {
           <div className="podcast-title">
             {podcast.title}
             <div className="podcast-actions">
-              <Link className="podcast-action-item blue" to={`/podcast/${podcast.title}`}>
+              <Link className="podcast-action-item blue podcast-link"
+                to={{
+                  pathname: `/podcast/${podcast._id}`,
+                  state: {
+                    podcast
+                  }
+                }}>
                 <i className="fas fa-list-alt"></i>
               </Link>
-              <i className="fas fa-trash-alt podcast-action-item red"></i>
+              <Link className="podcast-action-item podcast-link red" to="#" onClick={() => { this.props.deletePodcast(podcast._id) }}>
+                <i className="fas fa-trash-alt"></i>
+              </Link>
             </div>
-
           </div>
           <div className="podcast-image-container">
             <img className="podcast-image" src={podcast.image} alt={podcast.title} />
@@ -47,16 +36,12 @@ class Home extends React.Component {
     })
   }
 
-  componentDidMount() {
-    this.getAllPodcasts();
-  }
-
   render = () => {
-    const { podcasts } = this.state
+    const { podcasts } = this.props;
     if (!podcasts) {
-      return 'Loading Podcasts...'
+      return 'Loading Podcasts...';
     } else {
-      const podcastList = this.renderPodcastCards(podcasts)
+      const podcastList = this.renderPodcastCards(podcasts);
       return (
         <>
           {podcastList}

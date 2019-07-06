@@ -1,23 +1,21 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom'
-import Home from './components/Home/Home'
+import { Route, Switch } from 'react-router-dom';
+import Home from './components/Home/Home';
+import Podcast from './components/Podcast/Podcast';
 
 class Routes extends React.Component {
   render() {
-    // const { countriesList, authentication } = this.props
+    const { podcasts, deletePodcast } = this.props
     return (
       <Switch>
-
-        {/* <Route path="/podcast/:name" component={Podcast} /> */}
+      
+        <Route path="/podcast/:id" component={Podcast} />
 
         <Route path="/" render={() => {
-          return <Home />
+          return <Home podcasts={podcasts} deletePodcast={deletePodcast} />
         }} />
 
-        {/* <Route path="/list" render={() => {
-          return <List countriesList={countriesList} authentication={authentication} />
-        }} /> */}
 
 
         {/* <Route path="/register" render={() => {
@@ -29,7 +27,6 @@ class Routes extends React.Component {
         }} /> */}
 
         {/* <Route path="/search" /> */}
-
       </Switch>
     )
   }

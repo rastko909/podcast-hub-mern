@@ -1,3 +1,23 @@
+a.podcast-link {
+  color: white;
+  text-decoration: none;
+}
+
+a.podcast-link:active {
+  color: white;
+  text-decoration: none;
+}
+
+a.podcast-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+a.podcast-link:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .podcast-card {
   display: flex;
   flex-direction: column;
@@ -16,7 +36,6 @@
 }
 
 .podcast-actions {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -56,7 +75,6 @@
 }
 
 .podcast-description {
-  /* min-height: 15rem; */
   padding: 1rem;
   border-radius: 0.5rem;
   color: black;
@@ -72,7 +90,6 @@
   background: #F3F2F3;
   border-radius: 0.5rem;
   padding: 0.5rem;
-  /* z-index: 1000; */
   display: flex;
   flex-direction: row;
   align-items: center;
