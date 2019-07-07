@@ -2,8 +2,6 @@ const Podcast = require('../models/Podcast')
 let Parser = require('rss-parser');
 let parser = new Parser();
 
-const urls = ['https://rss.acast.com/aunty-donna-podcast', 'tigerbelly.libsyn.com/rss']
-
 const viewPodcast = async (request, response) => {
   const { id } = request.params;
   const episodes = [];
@@ -44,6 +42,7 @@ const newPodcast = async (request, response) => {
     const feed = await parser.parseURL(url);
     const podcast = await Podcast.create({
       url: url,
+      categories: feed.itunes.categories,
       title: feed.title,
       image: feed.image.url,
       description: feed.description
@@ -54,33 +53,25 @@ const newPodcast = async (request, response) => {
     return response.status(201).send(`Successfully added podcast URL: ${podcast}`)
   }
   catch (error) {
-    return esponse.status(400).send(error)
+    return response.status(400).send(error)
   }
 }
 
 const getAllPodcasts = async (request, response) => {
-  const podcasts = await Podcast.find();
+  try {
+    var podcasts = await Podcast.find();
+  }
+  catch (error) {
+    return response.status(401).send(error)
+  }
   return response.status(200).send(podcasts);
 }
 
 const seedPodcasts = async (request, response) => {
-  await Podcast.deleteMany();
-  try {
-    for (let url of urls) {
-      console.log(url)
-      let feed = await parser.parseURL(url);
-      const podcast = await Podcast.create({
-        url: url,
-        title: feed.title,
-        image: feed.image.url,
-        description: feed.description
-      })
-    }
-    return response.status(200).send('Seeded podcasts successfully.');
-  }
-  catch (error) {
-    return response.status(400).send(error);
-  }
+  
 }
+
+const urls = ['https://rss.acast.com/aunty-donna-podcast', 'tigerbelly.libsyn.com/rss',
+  'http://www.espn.com/espnradio/feeds/rss/podcast.xml?id=16787314', 'http://feeds.feedburner.com/YourMomsHouseWithChristinaPazsitzkyAndTomSegura']
 
 module.exports = { newPodcast, getAllPodcasts, viewPodcast, seedPodcasts, deletePodcast }

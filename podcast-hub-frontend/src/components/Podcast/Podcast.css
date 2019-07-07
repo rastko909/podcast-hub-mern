@@ -8,6 +8,12 @@
   justify-content: flex-start;
 }
 
+.categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .episode-link-container {
   background: white;
   color: black;

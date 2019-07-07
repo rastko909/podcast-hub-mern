@@ -1,7 +1,8 @@
 import React from 'react';
 import './Podcast.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import innerText from 'react-innertext';
+// import { Link } from 'react-router-dom';
 
 class Podcast extends React.Component {
 
@@ -24,7 +25,8 @@ class Podcast extends React.Component {
   }
 
   podcastHeader = () => {
-    const { title, image, description } = this.props.location.state.podcast
+    console.log(this.props.location.state.podcast)
+    const { title, image, description, categories } = this.props.location.state.podcast
     return (
       <div className="podcast-header">
         <div className="podcast-header-profile">
@@ -34,7 +36,14 @@ class Podcast extends React.Component {
               <h1>{title}</h1>
             </div>
             <div className="podcast-header-description">
-              <p className="desc">{description}</p>
+              <p className="desc">{innerText(description)}</p>
+              <p className="categories desc">
+                {categories.map((category, index) => {
+                  return (
+                    <span key={index} className="category"><strong> #{category}</strong></span>
+                  )
+                })}
+              </p>
             </div>
           </div>
 

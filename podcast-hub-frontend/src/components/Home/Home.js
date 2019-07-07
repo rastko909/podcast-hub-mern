@@ -6,8 +6,11 @@ class Home extends React.Component {
 
   renderPodcastCards = (podcasts) => {
     return podcasts.map((podcast, index) => {
+      console.log(podcast.categories)
       return (
+
         <div key={index} className="podcast-card">
+        
           <div className="podcast-title">
             {podcast.title}
             <div className="podcast-actions">
