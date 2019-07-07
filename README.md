@@ -1,25 +1,22 @@
-# podcast-hub-mern
+# Podcast Hub
+Podcast Hub is a web application built on MERN. 
 
-Podcast Hub is a podcast application built on MERN. 
+## Aim
 
-Aim: 
+Build a robust podcast application using MongoDB, Express, React and Node.js. 
 
-	- Build robust podcast application using React, Express/Node.js and MongoDB. Mainly as an exercise to become better at the stack and JS in general.
+This project is intended to help further develop my JavaScript and MERN skills. Main areas of focus will be on using React, implementing authorization (Passport.js) and learning MongoDB/Mongoose patterns, as opposed to traditional database relationships. 
 
-Planned features:
+## Features
+- Multi user authentication and authorization using Passport.js
+- Allow users to add their favourite podcasts using an RSS link or by browing through an API.
+- Mark podcasts as favourites, others for later listening, take notes, timestamps.
+- Use an embedded media player to listen to podcasts.
+- Set up custom alerts when new podcasts are released. 
 
-	- Multiple user support with validation using Passport.js
-	- Add podcast feeds using an RSS URL or by browsing through a podcast API (need to find a good one, or scrap some data)
-	- Allow users to save podcasts to their drive or stream through an embedded media player
-	- Mark episodes as favourites or for later listening, implement a note system
-	- Implement a timestamp feature similar to SoundCloud
-	- Sharing or social component
-	- Podcast feed monitor and alerts (eg. notify user when a new episode comes out - set reminders, etc)
-
-Leaning outcomes:
-
-	- Skill up with React for front end rendering
-	- Learn how to use MongoDB as opposed to tradional relational databases like PostgreSQL
-	- Learn methods of caching and validating data eg. when to reference database vs hitting a feed or API
-	- Implement testing (TDD, automated, etc)
-
+## Learning Outcomes
+- Further React experience
+- Implement various MongoDB schemas and references 
+- Learn authorization using Passport.js, experiment with JWT vs. cookies, etc.
+- Learn how to cache data, look at different methods of cacheing or validating existing data.
+- Solidify Node, Express skills. 
