@@ -20,3 +20,9 @@ This project is intended to help further develop my JavaScript and MERN skills. 
 - Learn authorization using Passport.js, experiment with JWT vs. cookies, etc.
 - Learn how to cache data, look at different methods of cacheing or validating existing data.
 - Solidify Node, Express skills. 
+
+## Preview, WIP snapshots
+
+
+![Home Page]('https://i.imgur.com/T58xzqY.png')
+![Episode List]('https://i.imgur.com/RCDro6I.png')
