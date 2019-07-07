@@ -24,5 +24,6 @@ This project is intended to help further develop my JavaScript and MERN skills. 
 ## Preview, WIP snapshots
 
 
-![Home Page]('https://i.imgur.com/T58xzqY.png')
-![Episode List]('https://i.imgur.com/RCDro6I.png')
+![Home Page](https://i.imgur.com/T58xzqY.png)
+
+![Episode List](https://i.imgur.com/RCDro6I.png)
